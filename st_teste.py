@@ -1,5 +1,5 @@
 import streamlit as st
-import request
+import requests
 
 cep = st.text_input('Digite o CEP:')
 url = f'https://viacep.com.br/ws/{cep}/json/'
