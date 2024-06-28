@@ -9,5 +9,14 @@ url = f'https://viacep.com.br/ws/{cep}/json/'
 try:
   response = requests.get(url)
   dados = response.json()
+  st.write(
+    dados['localidade'],
+    ' - ',
+    dados['logradouro'],
+    ' - ',
+    dados['bairro'],
+    ' / ',
+    dados['uf']
+           )
 except:
-  st.error('CEP incorreto ou inexistente')
+  st.error('CEP incorreto ou inexistente!')
